@@ -142,13 +142,10 @@ while True:
 
     else:
         # Looping until used percentage is above threshold
-        logging.info("Path %s currently at %s%% used" % (DISK_PATH, USED_PERC) )
+        logging.info("Path %s currently at %s%% free" % (DISK_PATH, USED_PERC) )
         logging.debug("Sleeping for 60 seconds")
         # Sleep time loop for 60 seconds
         time.sleep(60)
 
 if __name__ == "__main__":
-    try:
         main()
-    except KeyboardInterrupt:
-        logging.warning("Stopping...")
